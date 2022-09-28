@@ -25,21 +25,20 @@ public class TipCalculator {
         while ((n = scan.nextDouble()) != -1) {
             items.add(n);
         }
+
         /* I created the variable of initialBill and made a loop that adds every item from my ArrayList
         to the initialBill to create the total bill sum */
         double initialBill = 0;
         for (Double i : items) {
            initialBill += i;
         }
+
+        //calculations
         /* this calculates the tip amount separately by multiplying the bill
         amount by the tip percentage then dividing by 100 */
         double tipAmt = (initialBill*percent) / 100;
-        //this formats the amount into standard dollars and cents
-        String tipAmt1 = formatter.format(tipAmt);
         //this is creating the bill amt plus tip, but as a double
         double finalBill = initialBill + tipAmt;
-        //this formats the final bill amount above, but as a string
-        String finalBill1 = formatter.format(initialBill + tipAmt);
         //this formats the bill amount per person without tip
         String ibPerPerson = formatter.format(initialBill / people);
         //this formats the bill amount per person with tip
@@ -47,12 +46,12 @@ public class TipCalculator {
         //this formats the tip amount per person
         String tipPerPerson = formatter.format(tipAmt / people);
 
-        //these lines print all of the information out
+        //printing everything out
         System.out.println("-------------------");
         System.out.println("Total bill before tip: $" + initialBill);
         System.out.println("Tip percentage: " + percent + "%");
-        System.out.println("Total tip: $" + tipAmt1);
-        System.out.println("Total bill with tip: $" + finalBill1);
+        System.out.println("Total tip: $" + tipAmt);
+        System.out.println("Total bill with tip: $" + finalBill);
         System.out.println("Per person cost before tip: $" + ibPerPerson);
         System.out.println("Tip per person: $" + tipPerPerson);
         System.out.println("Total cost per person: $" + fbPerPerson);
