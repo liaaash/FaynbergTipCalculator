@@ -57,5 +57,6 @@ public class TipCalculator {
         System.out.println("Tip per person: $" + tipPerPerson);
         System.out.println("Total cost per person: $" + fbPerPerson);
         System.out.println("-------------------");
+
     }
 }
