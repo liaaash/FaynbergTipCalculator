@@ -12,11 +12,12 @@ public class TipCalculator {
         //welcoming the user
         System.out.println("Welcome to the tip calculator!");
         //saving # of people in the group as a variable
-        System.out.println("How many people are in your group?");
+        System.out.println("How many people are in your group? (Enter an integer)");
         int people = scan.nextInt();
         //saving preferred tip percentage as an integer
         System.out.println("Enter the tip percentage as an integer.");
         int percent = scan.nextInt();
+
         /* this is the while loop, so as the user inputs the price of each item they ordered,
         the loop checks to see whether the item is equal to -1 and if it isn't then the item is added to
         the ArrayList (items), but if it is then the loop ends */
@@ -57,5 +58,4 @@ public class TipCalculator {
         System.out.println("Total cost per person: $" + fbPerPerson);
         System.out.println("-------------------");
     }
-
 }
